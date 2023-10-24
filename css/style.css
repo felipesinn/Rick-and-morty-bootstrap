@@ -1,0 +1,152 @@
+main {
+  background-color: #252525;
+
+}
+
+.character-card {
+ border-radius: 10px;
+ border-radius: 5px !important;
+ padding: 10px;
+ width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+  transform: scale(1.1);
+}
+
+.card-body {
+  border-bottom: 2.8px solid #389f15;
+  border-left: 2.8px solid #389f15;
+  border-right: 2.8px solid #389f15;
+  border-radius: 5px;
+  color: beige !important;
+  background-color: #252525;
+
+}
+
+
+.status-badge.alive {
+  background-color: green;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+
+.status-badge.dead {
+  background-color: red;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+
+#tex-logo {
+  color: #105718;
+  font-size: 55px !important;
+
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.col img {
+  animation: moveImage 3s ease infinite;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 10% !important; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: auto;
+  
+}
+
+.modal-content {
+  background-color: #0e0d0d !important;
+  border: 3.5px solid #105718 !important;
+  border-right: 3.5px solid #105718 !important;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  max-height: 80%;
+  overflow-y: auto;
+  
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.modal-image {
+  max-width: 100%; 
+  max-height: 300px; 
+
+}
+
+.modal-body {
+  color: white !important;
+  
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+      margin: 5% auto; 
+      max-width: 95%; 
+  }
+}
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.pulse-logo {
+  animation: pulse 2s infinite;
+}
+
+
+#footer-desciption{
+  color: #105718;
+  font-size: medium;
+}
+
+#footer-direitos {
+  display: flex !important;
+  justify-items: end !important;
+  color: #105718;
+  font-size: larger;
+  align-items: center !important;
+}

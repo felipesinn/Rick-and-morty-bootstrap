@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./src/img/RICK_MORTY_ICON.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>RICK AND MORTY</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row bg-light align-items-center">
+                <div class="col-">
+                    <img src="src/img/RICK_MORTY_ICON.png" alt="Logo Rick and Morty" height="60px" class="pulse-logo">
+                </div>
+                <div class="col-12 text-center  ">
+                    <h1 id="tex-logo">API Rick and Morty</h1>
+                    <nav class="navbar bg-body-tertiary justify-content-center">
+                        <form class="form-inline " role="search" style="width: 200px;">
+                            <div class="input-group">
+                                <input class="form-control" type="search" placeholder="Buscar Personagens"
+                                    aria-label="Search">
+                            </div>
+                        </form>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div id="no-results" class="alert alert-warning bg-danger text-center" style="display: none;">
+                Nenhum personagem encontrado para a pesquisa.
+            </div>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12 text-danger p-4">
+                    <div id="character-card" class="card-group gap-2 p-lg-2 m-lg-2"></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div id="characterModal" class="modal">
+                        <div class="modal-content text-white">
+                            <span class="close" id="closeModalButton">&times;</span>
+                            <img src="" alt="Imagem do Personagem" class="modal-image" id="modalCharacterImage"
+                                style="max-width: 100%">
+                            <h2 id="modalCharacterName"></h2>
+                            <h6 id="modalCharacterSpecies"></h6>
+                            <p id="modalCharacterOrigin"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="pagination d-flex justify-content-center p-2">
+                    <button id="btn-Anterior" class="btn btn-dark btn-scroll">Anterior</button>
+                    <span id="currentPage" class="mx-3 text-danger">1</span>
+                    <button id="btn-Proximo" class="btn btn-dark btn-scroll">Próximo</button>
+                </div>
+            </div>
+        </div>
+        <section class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="./src/img/Rick-And-Morty-Logo-PhotoRoom.png-PhotoRoom.png" alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="./src/img/fund_rick.png" alt="" class="img-fluid animate-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container-fluid p-3 text-white" style="background-color: #151916;">
+            <div class="row text-center" id="footer-desciption">
+                <div class="col-md-4 col-sm-12">
+                    <p class="fs-6">characters: 826</p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <p class="fs-6">Locations: 126 </p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <p class="fs-6">Episodes: 51</p>
+                </div>
+            </div>
+            <section class="col-md-8 col-sm-12 " id="footer-direitos">
+                <p class="col-md-4 col-sm-12 d-flex justify-content-center m-5">
+                    &copy; 2023 Felipe Sinn. Todos os direitos reservados.
+                </p>
+            </section>
+          
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        style="height: 10px;"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+    <script src="./api.js/api.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
